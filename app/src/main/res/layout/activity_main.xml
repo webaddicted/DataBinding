@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="handler"
+            type="com.deepaksharma.webaddicted.databinding.ui.mainActivity.MainHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::onRecyclerVie}"
+            android:text="Recycler view" />
+
+        <Button
+            android:id="@+id/btn_callFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::callFragmen}"
+            android:text="Show Fragment" />
+
+        <Button
+            android:id="@+id/btn_includeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{handler::includeLayou}"
+            android:text="Include layout Click" />
+
+        <include
+            android:id="@+id/custom_inculde"
+            layout="@layout/custom_layout"/>
+        <FrameLayout
+            android:id="@+id/fragment_Container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></FrameLayout>
+    </LinearLayout>
+</layout>
